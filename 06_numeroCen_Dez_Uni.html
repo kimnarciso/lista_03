@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: NÚMERO DE CENTENAS, DEZENAS E UNIDADES
+    Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+    Observando os termos no plural a colocação do "e", da vírgula entre outros.
+    
+    Exemplo:
+    326 = 3 centenas, 2 dezenas e 6 unidades
+    12 = 1 dezena e 2 unidades
+    Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
+    */
+
+    //ENTRADA
+    const numero = Number (prompt(`Informe um número até 1000`));
+    //PROCESSAMENTO
+    const centena = Math.floor(numero/100);
+    const dezena = Math.floor((numero % 100) / 10);
+    const unidade = numero % 10;
+
+    //SAÍDA
+   if (centena==0 && dezena==1 && unidade==1){
+        alert (`${numero} = ${dezena} dezena e ${unidade} unidade`);
+    }else if (centena==0 && dezena==0 && unidade==1){
+        alert (`${numero} = ${unidade} unidade`);
+    }else if (centena==0 && dezena==1 && unidade==0){
+        alert (`${numero} = ${dezena} dezena e ${unidade} unidade`);
+    }else if (centena==0 && dezena>1 && unidade==1){
+        alert(`${numero} = ${dezena} dezenas e ${unidade} unidade`);
+    }else if (centena==0 && dezena>1 && unidade==0){
+        alert(`${numero} = ${dezena} dezenas e ${unidade} unidade`);
+    }else if (centena==0 && dezena==1 && unidade>1){
+        alert(`${numero} = ${dezena} dezena e ${unidade} unidades`);
+    }else if (centena==0 && dezena==0 && unidade>1){
+        alert(`${numero} = ${unidade} unidades`);
+    }else if (centena==0 && dezena>1 && unidade>1){
+        alert(`${numero} = ${dezena} dezenas e ${unidade} unidades`);
+    }else if (centena=>2 && dezena>1 && unidade==0){
+        alert (`${numero} = ${centena} centenas, ${dezena} dezenas e ${unidade} unidade`);
+    }else if (centena=>2 && dezena>1 && unidade>1){
+        alert(`${numero} = ${centena} centenas, ${dezena} dezenas e ${unidade} unidades`);
+    }else if (centena=>2 && dezena>1 && unidade==1){
+        alert (`${numero} = ${centena} centenas, ${dezena} dezenas e ${unidade} unidade`);
+    }else if (centena==1 && dezena==1 && unidade==1){
+        alert (`${numero} = ${centena} centena, ${dezena} dezena e ${unidade} unidade`);
+    } else if (centena==1 && dezena==0 && unidade==0){
+        alert(`${numero} = ${centena} centena, ${dezena} dezena e ${unidade} unidade`);
+    }else if (centena=>2 && dezena==1 && unidade==1){
+        alert(`${numero} = ${centena} centenas, ${dezena} dezena e ${unidade} unidade`);
+    }else if (centena=>2 && dezena==0 && unidade==1){
+        alert (`${numero} = ${centena} centenas, ${dezena} dezena e ${unidade} unidade`);
+    }else if (centena=>2 && dezena==0 && unidade==0){
+        alert (`${numero} = ${centena} centenas, ${dezena} dezena e ${unidade} unidade`);
+    }else if (centena=>2 && dezena==1 && unidade==0){
+        alert (`${numero} = ${centena} centenas, ${dezena} dezena e ${unidade} unidade`);
+    }else if (centena=>2 && dezena==1 && unidade>1){
+        alert (`${numero} = ${centena} centenas, ${dezena} dezena e ${unidade} unidades`);
+    }else if (centena=>2 && dezena==0 && unidade>1){
+        alert (`${numero} = ${centena} centenas, ${dezena} dezena e ${unidade} unidades`);
+    }else {
+        alert (`Insira um número válido que esteja entre 0 e 1000`);
+    }
+    </script>
