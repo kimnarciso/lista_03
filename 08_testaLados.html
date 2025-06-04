@@ -13,5 +13,7 @@
     const trianguloAc = trianguloA + trianguloC;
     const trianguloBc = trianguloB + trianguloC;
     //SAÍDA
-    if (trianguloAb> trianguloC && (trianguloA != trianguloB != trianguloBc))
+    if ((trianguloAb > trianguloC || trianguloAc > trianguloB || trianguloBc > trianguloA) && (trianguloA != trianguloB != trianguloC)){
+        alert (`É um triângulo e ele é um triângulo escaleno`);
+    } else if ((trianguloAb > trianguloC || trianguloAc > trianguloB || trianguloBc > trianguloA) && (trianguloA == trianguloB != trianguloC || trianguloA == trianguloC != trianguloB || ))
 </script>
