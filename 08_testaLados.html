@@ -16,9 +16,9 @@
     //SAÍDA
     if ((trianguloAb > trianguloC && trianguloAc > trianguloB && trianguloBc > trianguloA) && (trianguloA == trianguloB && trianguloA == trianguloC && trianguloC == trianguloB)) {
         alert(`É um triângulo e ele é um triângulo equilátero`);
-    } else if ((trianguloAb > trianguloC && trianguloAc > trianguloB && trianguloBc > trianguloA) && (trianguloA === trianguloB || trianguloA === trianguloC || trianguloB === trianguloC)) {
+    } else if ((trianguloAb > trianguloC && trianguloAc > trianguloB && trianguloBc > trianguloA) && (trianguloA == trianguloB || trianguloA == trianguloC || trianguloB == trianguloC)) {
         alert(`É um triângulo e ele é um triângulo isósceles`);
-    }else if ((trianguloAb > trianguloC && trianguloAc > trianguloB && trianguloBc > trianguloA) && (trianguloA !== trianguloB && trianguloA !== trianguloC && trianguloB !== trianguloC)) {
+    }else if ((trianguloAb > trianguloC && trianguloAc > trianguloB && trianguloBc > trianguloA) && (trianguloA != trianguloB && trianguloA != trianguloC && trianguloB != trianguloC)) {
         alert(`É um triângulo e ele é um triângulo escaleno`);
     } else {
         alert(`Não é um triângulo`);
