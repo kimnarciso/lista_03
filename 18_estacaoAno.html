@@ -5,11 +5,11 @@
     */
 
     // ENTRADA
-    const mes = prompt(`Qual é o mês atual?`).toUpperCase().trim();
-    const hemisferio = prompt(`Qual é o hemisfério em que você está (Norte ou Sul)?`).toUpperCase().trim();
+    const mes = prompt(`Informe o mês atual?`).toUpperCase().trim();
+    const hemisferio = prompt(`Informe o hemisfério em que você está (N-norte ou S-sul)?`).toUpperCase().trim();
 
     // PROCESSAMENTO
-    if (hemisferio == "SUL") {
+    if (hemisferio == "S") {
         if (mes == "JANEIRO" || mes == "FEVEREIRO" || mes == "MARÇO") {
             alert("É verão!");
         } else if (mes == "ABRIL" || mes == "MAIO" || mes == "JUNHO") {
@@ -21,7 +21,7 @@
         } else {
             alert("Mês inválido.");
         }
-    } else if (hemisferio == "NORTE") {
+    } else if (hemisferio == "N") {
         if (mes == "JANEIRO" || mes == "FEVEREIRO" || mes == "MARÇO") {
             alert("É inverno!");
         } else if (mes == "ABRIL" || mes == "MAIO" || mes == "JUNHO") {

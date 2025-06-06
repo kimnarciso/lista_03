@@ -16,26 +16,26 @@
     //ENTRADA
 
     const litros = Number(prompt(`Informe quantos litros foram comprados:`));
-    const combustivel = prompt(`Informe o tipo de combustível, usando A-álcool e G-gasolina:`).toUpperCase().trim();
+    const combustivel = prompt(`Informe o tipo de combustível (A-álcool e G-gasolina):`).toUpperCase().trim();
 
     //PROCESSAMENTO
 
     const precoAlcool = (litros * 6.10);
     const precoGasolina = (litros * 6.50);
 
-    const desconto3Porc = precoAlcool - ((precoAlcool*3) / 100);
-    const desconto5Porc = precoAlcool - ((precoAlcool*5) / 100);
-    const desconto4Porc = precoGasolina - ((precoGasolina*4) / 100);
-    const desconto6Porc = precoGasolina - ((precoGasolina*6) / 100);
+    const desconto3 = precoAlcool - ((precoAlcool*3) / 100);
+    const desconto5 = precoAlcool - ((precoAlcool*5) / 100);
+    const desconto4 = precoGasolina - ((precoGasolina*4) / 100);
+    const desconto6 = precoGasolina - ((precoGasolina*6) / 100);
 
     if(combustivel == "A" && litros < 20) {
-        alert(`O preço a ser pago pelo cliente é de R$${desconto3Porc}!`);
+        alert(`O preço a ser pago pelo cliente é de R$${desconto3}!`);
     } else if(combustivel == "A" && litros > 20){
-        alert(`O preço a ser pago pelo cliente é de R$${desconto5Porc}!`);
+        alert(`O preço a ser pago pelo cliente é de R$${desconto5}!`);
     } else if(combustivel == "G" && litros < 20){
-        alert(`O preço a ser pago pelo cliente é de R$${desconto4Porc}!`);
+        alert(`O preço a ser pago pelo cliente é de R$${desconto4}!`);
     } else if(combustivel == "G" && litros > 20){
-        alert(`O preço a ser pago pelo cliente é de R$${desconto6Porc}!`);
+        alert(`O preço a ser pago pelo cliente é de R$${desconto6}!`);
     } else {
         alert(`Valor inválido!`);
     }
