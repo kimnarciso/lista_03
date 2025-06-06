@@ -29,13 +29,13 @@
     const desconto6 = precoGasolina - ((precoGasolina*6) / 100);
 
     if(combustivel == "A" && litros < 20) {
-        alert(`O preço a ser pago pelo cliente é de R$${desconto3}!`);
+        alert(`O preço a ser pago pelo cliente é de R$${desconto3.toFixed(2)}!`);
     } else if(combustivel == "A" && litros > 20){
-        alert(`O preço a ser pago pelo cliente é de R$${desconto5}!`);
+        alert(`O preço a ser pago pelo cliente é de R$${desconto5.toFixed(2)}!`);
     } else if(combustivel == "G" && litros < 20){
-        alert(`O preço a ser pago pelo cliente é de R$${desconto4}!`);
+        alert(`O preço a ser pago pelo cliente é de R$${desconto4.toFixed(2)}!`);
     } else if(combustivel == "G" && litros > 20){
-        alert(`O preço a ser pago pelo cliente é de R$${desconto6}!`);
+        alert(`O preço a ser pago pelo cliente é de R$${desconto6.toFixed(2)}!`);
     } else {
         alert(`Valor inválido!`);
     }
