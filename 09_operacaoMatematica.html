@@ -28,7 +28,7 @@
         }else if (numero1 == 0 ){
             alert(`Não é possível dividir o número zero.`);
         } else {
-            resultado = ((numero1 / numero2).toFixed(2));
+            resultado = numero1 / numero2;
         }
     } else {
         alert(`Operação inválida.`);
@@ -46,7 +46,7 @@
         } else if (resultado < 0) {
             mensagem += `negativo `;
         } else {
-            mensagem += `o resultado da operação é igual a 0 `;
+            mensagem += `zero não é positivo e nem negativo `;
         }
 
         if (Number.isInteger(resultado)) {
