@@ -15,8 +15,12 @@
 
     //ENTRADA
 
-    const litros = Number(prompt(`Informe quantos litros foram comprados:`));
-    const combustivel = prompt(`Informe o tipo de combustível (A-álcool e G-gasolina):`).toUpperCase().trim();
+    let litros = Number(prompt(`Informe quantos litros foram comprados:`));
+    let combustivel = prompt(`Informe o tipo de combustível (A-álcool e G-gasolina):`).toUpperCase().trim();
+    while (combustivel !== "A" && combustivel !== "G") {
+        alert(`Valor inválido! Responda com A ou G.`);
+        combustivel = prompt(`Informe o tipo de combustível (A-álcool e G-gasolina):`).toUpperCase().trim();
+    }
 
     //PROCESSAMENTO
 
@@ -28,13 +32,13 @@
     const desconto4 = precoGasolina - ((precoGasolina*4) / 100);
     const desconto6 = precoGasolina - ((precoGasolina*6) / 100);
 
-    if(combustivel == "A" && litros < 20) {
+    if(combustivel == "A" && litros <= 20) {
         alert(`O preço a ser pago pelo cliente é de R$${desconto3.toFixed(2)}!`);
-    } else if(combustivel == "A" && litros > 20){
+    } else if(combustivel == "A" && litros >= 20){
         alert(`O preço a ser pago pelo cliente é de R$${desconto5.toFixed(2)}!`);
-    } else if(combustivel == "G" && litros < 20){
+    } else if(combustivel == "G" && litros <= 20){
         alert(`O preço a ser pago pelo cliente é de R$${desconto4.toFixed(2)}!`);
-    } else if(combustivel == "G" && litros > 20){
+    } else if(combustivel == "G" && litros >= 20){
         alert(`O preço a ser pago pelo cliente é de R$${desconto6.toFixed(2)}!`);
     } else {
         alert(`Valor inválido!`);
