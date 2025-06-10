@@ -11,7 +11,11 @@
 
     //ENTRADA
 
-    const porte = prompt(`Informe o porte do seu cachorro (P-porte pequeno, M-porte médio e G-porte grande.`).toUpperCase().trim();
+    let porte = prompt(`Informe o porte do seu cachorro (P-porte pequeno, M-porte médio e G-porte grande):`).toUpperCase().trim();
+    while (porte !== "P" && porte !== "M" && porte !== "G") {
+        alert(`Valor inválido! Responda com P, M ou G.`);
+        porte = prompt(`Informe o porte do seu cachorro (P-porte pequeno, M-porte médio e G-porte grande):`).toUpperCase().trim();
+    }
     const portePequeno = 5;
     const porteMedio = 6;
     const porteGrande = 7;
