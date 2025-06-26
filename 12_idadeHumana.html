@@ -16,23 +16,18 @@
         alert(`Valor inválido! Responda com P, M ou G.`);
         porte = prompt(`Informe o porte do seu cachorro (P-porte pequeno, M-porte médio e G-porte grande):`).toUpperCase().trim();
     }
-    const portePequeno = 5;
-    const porteMedio = 6;
-    const porteGrande = 7;
     const idadeHumana= prompt(`Informe há quantos anos o seu cachorro nasceu:`);
-    const idadePequeno = Math.ceil(idadeHumana * portePequeno);
-    const idadeMedio =  Math.ceil(idadeHumana * porteMedio);
-    const idadeGrande =  Math.ceil(idadeHumana * porteGrande);
+    const idadePequeno = Math.ceil(idadeHumana * 5);
+    const idadeMedio =  Math.ceil(idadeHumana * 6);
+    const idadeGrande =  Math.ceil(idadeHumana * 7);
 
     //PROCESSAMENTO
 
-        if(porte == "P"){
-            alert(`A idade do seu cachorro é de ${idadePequeno}.`);
-        } else if(porte == "M"){
-             alert(`A idade do seu cachorro é de ${idadeMedio}.`);
-        } else if(porte == "G"){
-            alert(`A idade do seu cachorro é de ${idadeGrande}.`);
+        if(porte === "P"){
+            alert(`A idade do seu cachorro é ${idadePequeno}.`);
+        } else if(porte === "M"){
+             alert(`A idade do seu cachorro é ${idadeMedio}.`);
         } else {
-            alert(`Valor inválido!`)
-        }
+            alert(`A idade do seu cachorro é ${idadeGrande}.`);
+        } 
 </script>
